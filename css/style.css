@@ -65,6 +65,8 @@ nav ul li{
 .card:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 45px 0px, rgba(0, 0, 0, 0.1) 0px 61px 67px 0px; */
+    
 }
 .card img {
     width: 100%;
