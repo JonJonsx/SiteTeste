@@ -10,15 +10,12 @@ section{
     height: 100vh;
     width: 100%;
 }
-section .imgFundo{
-    width: 100%;
-    height: 100vh;
-}
 header{
     background-color: #8e44ad;
     width: 100%;
     height: 80px;
     position: fixed;
+    z-index: 100;
 }
 .box-header{
     display: flex;
@@ -47,7 +44,36 @@ nav ul li{
     display: inline-block;
     margin-left: 10px;
 }
+/* Aqui acaba o header */
 
+.imgFundo{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.imgText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgText div{
+    z-index: 1;
+    width: 50%;
+    max-width: 90%;
+    text-align: justify;
+}
+.imgText div h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 3px 3px 2px #000;
+}
+.imgText div p{
+    font-size: 22px;
+    color: #fff;
+    text-shadow: 3px 3px 2px #000;
+}
 /* CARD */
 .container-card{
     display: flex;
@@ -56,24 +82,29 @@ nav ul li{
 .card{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin: 20px;
     background-color: #8e44ad;
     border-radius: 10px;
+    width: auto;
+    height: 400px;
     transition: all 0.5s;
 }
 .card:hover{
     transform: scale(1.1);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 45px 0px, rgba(0, 0, 0, 0.1) 0px 61px 67px 0px; */
-    
+    box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.5);
 }
-.card img {
+.card .imgCard{
+}
+.card img{
     width: 100%;
+    height: 200px;
     border-radius: 10px;
 }
 .card .read{
     padding: 15px;
+    margin: 0 10px 10px 15px;
 }
 .read h1{
     color: #fff;
@@ -81,6 +112,15 @@ nav ul li{
 }
 .read p{
     text-align: justify;
+}
+
+footer{
+    width: 100%;
+    background-color: #8e44ad;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media (max-width: 700px){
     .container-card{
@@ -90,4 +130,8 @@ nav ul li{
         flex-wrap: wrap;
         height: auto;
     }
+    .card{
+        margin: 50px;
+    }
 }
+    
